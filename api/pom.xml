@@ -9,8 +9,8 @@
 
 	<artifactId>registration-api</artifactId>
 	<packaging>jar</packaging>
-	<name>Registration App Module API</name>
-	<description>API project for RegistrationApp</description>
+	<name>Registration Module API</name>
+	<description>API project for Registration</description>
 
 	<dependencies>
 	</dependencies>

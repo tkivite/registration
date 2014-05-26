@@ -13,8 +13,6 @@
  */
 package org.openmrs.module.registration;
 
-import java.util.regex.Pattern;
-
 import org.apache.commons.lang.StringUtils;
 import org.openmrs.Person;
 import org.openmrs.PersonAddress;
@@ -23,6 +21,8 @@ import org.openmrs.api.context.Context;
 import org.openmrs.layout.web.address.AddressSupport;
 import org.openmrs.layout.web.address.AddressTemplate;
 import org.springframework.validation.BindingResult;
+
+import java.util.regex.Pattern;
 
 public class RegistrationUiUtils {
 	
@@ -90,7 +90,7 @@ public class RegistrationUiUtils {
 			if (StringUtils.isNotBlank(address.getLatitude())) {
 				if (template.getElementRegex() != null && StringUtils.isBlank(template.getElementRegex().get("latitude"))) {
 					if (!RegistrationUiUtils.isValidLatitude(address.getLatitude())) {
-						errors.reject("registrationapp.latitude.invalid");
+						errors.reject("registration.latitude.invalid");
 					}
 				}
 			}
@@ -98,7 +98,7 @@ public class RegistrationUiUtils {
 			if (StringUtils.isNotBlank(address.getLongitude())) {
 				if (template.getElementRegex() != null && StringUtils.isBlank(template.getElementRegex().get("longitude"))) {
 					if (!RegistrationUiUtils.isValidLongitude(address.getLongitude())) {
-						errors.reject("registrationapp.longitude.invalid");
+						errors.reject("registration.longitude.invalid");
 					}
 				}
 			}
